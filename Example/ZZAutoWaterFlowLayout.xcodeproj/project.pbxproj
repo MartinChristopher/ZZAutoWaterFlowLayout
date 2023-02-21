@@ -43,10 +43,10 @@
 		614CAE9B79229145DD009ABB /* Pods-ZZAutoWaterFlowLayout_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZAutoWaterFlowLayout_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZZAutoWaterFlowLayout_Example/Pods-ZZAutoWaterFlowLayout_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		658E4A801EF748721F7BAA79 /* Pods_ZZAutoWaterFlowLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZAutoWaterFlowLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F530967298B81F9FF0BBF3 /* Pods-ZZAutoWaterFlowLayout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZAutoWaterFlowLayout_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZZAutoWaterFlowLayout_Tests/Pods-ZZAutoWaterFlowLayout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9C16169A694443A8A9AD7947 /* ZZAutoWaterFlowLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZZAutoWaterFlowLayout.podspec; path = ../ZZAutoWaterFlowLayout.podspec; sourceTree = "<group>"; };
-		AB8FD77A9F3BF983B9DFD90A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		9C16169A694443A8A9AD7947 /* ZZAutoWaterFlowLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZZAutoWaterFlowLayout.podspec; path = ../ZZAutoWaterFlowLayout.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AB8FD77A9F3BF983B9DFD90A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C690FE25FC22348A8B562026 /* Pods-ZZAutoWaterFlowLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZAutoWaterFlowLayout_Tests.release.xcconfig"; path = "Target Support Files/Pods-ZZAutoWaterFlowLayout_Tests/Pods-ZZAutoWaterFlowLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F61D8012EC8E759021DB6497 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F61D8012EC8E759021DB6497 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,6 @@
 				79F530967298B81F9FF0BBF3 /* Pods-ZZAutoWaterFlowLayout_Tests.debug.xcconfig */,
 				C690FE25FC22348A8B562026 /* Pods-ZZAutoWaterFlowLayout_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

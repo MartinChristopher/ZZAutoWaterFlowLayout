@@ -1,0 +1,6 @@
+framework module ZZAutoWaterFlowLayout {
+  umbrella header "ZZAutoWaterFlowLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}

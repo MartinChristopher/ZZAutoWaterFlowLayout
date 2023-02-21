@@ -1,0 +1,6 @@
+framework module Pods_ZZAutoWaterFlowLayout_Tests {
+  umbrella header "Pods-ZZAutoWaterFlowLayout_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
