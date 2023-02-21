@@ -1,5 +1,5 @@
 PODS:
-  - ZZAutoWaterFlowLayout (0.0.2)
+  - ZZAutoWaterFlowLayout (0.0.3)
 
 DEPENDENCIES:
   - ZZAutoWaterFlowLayout (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZZAutoWaterFlowLayout: 644d43320bab8bcb0e14b9be25915e1e45001ce8
+  ZZAutoWaterFlowLayout: 722e50bc900cb3a30ccd8a8a40690fe94387c8ec
 
 PODFILE CHECKSUM: 370a651e5f8b2aacd99e703bb525ba6a10489b6f
 

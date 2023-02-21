@@ -4,9 +4,9 @@
 
 import UIKit
 
-class ZZAutoWaterFlowLayout: UICollectionViewFlowLayout {
+public class ZZAutoWaterFlowLayout: UICollectionViewFlowLayout {
     // 列数
-    var columnCount: Int = 2
+    public var columnCount: Int = 2
     
     private lazy var attributesSource: [[UICollectionViewLayoutAttributes]] = []
     
@@ -14,7 +14,7 @@ class ZZAutoWaterFlowLayout: UICollectionViewFlowLayout {
     
     private var contentHeight: CGFloat = 0.0
     
-    override func prepare() {
+    public override func prepare() {
         super.prepare()
         contentHeight = 0.0
         columnHeights.removeAll()
@@ -36,7 +36,7 @@ class ZZAutoWaterFlowLayout: UICollectionViewFlowLayout {
         }
     }
     
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    public override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var attributesArray: [UICollectionViewLayoutAttributes] = []
         for i in 0..<attributesSource.count {
             for j in 0..<attributesSource[i].count {
@@ -49,7 +49,7 @@ class ZZAutoWaterFlowLayout: UICollectionViewFlowLayout {
         return attributesArray
     }
     
-    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    public override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
         let layoutAttributes = super.layoutAttributesForItem(at: indexPath)
         guard let itemSize = layoutAttributes?.size else {
@@ -76,11 +76,11 @@ class ZZAutoWaterFlowLayout: UICollectionViewFlowLayout {
         return attributes
     }
     
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
     
-    override var collectionViewContentSize: CGSize {
+    public override var collectionViewContentSize: CGSize {
         get {
             let collectionSize = super.collectionViewContentSize
             return CGSize(width: collectionSize.width, height: contentHeight + sectionInset.bottom)
