@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'ZZAutoWaterFlowLayout_Example' do
+  pod 'ZZAutoWaterFlowLayout', :path => '../'
+
+  target 'ZZAutoWaterFlowLayout_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
