@@ -8,11 +8,11 @@ public class ZZAutoWaterFlowLayout: UICollectionViewFlowLayout {
     // 列数
     public var columnCount: Int = 2
     
-    private lazy var attributesSource: [[UICollectionViewLayoutAttributes]] = []
+    private var contentHeight: CGFloat = 0.0
     
     private lazy var columnHeights: [CGFloat] = []
     
-    private var contentHeight: CGFloat = 0.0
+    private lazy var attributesSource: [[UICollectionViewLayoutAttributes]] = []
     
     public override func prepare() {
         super.prepare()
@@ -51,9 +51,9 @@ public class ZZAutoWaterFlowLayout: UICollectionViewFlowLayout {
     
     public override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
-        let layoutAttributes = super.layoutAttributesForItem(at: indexPath)
-        guard let itemSize = layoutAttributes?.size else {
-            return layoutAttributes
+        let superAttributes = super.layoutAttributesForItem(at: indexPath)
+        guard let itemSize = superAttributes?.size else {
+            return superAttributes
         }
         var minColumnHeight = columnHeights[0]
         var minColumn: Int = 0
@@ -74,10 +74,6 @@ public class ZZAutoWaterFlowLayout: UICollectionViewFlowLayout {
             contentHeight = maxContentHeight
         }
         return attributes
-    }
-    
-    public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-        return true
     }
     
     public override var collectionViewContentSize: CGSize {
