@@ -76,6 +76,10 @@ public class ZZAutoWaterFlowLayout: UICollectionViewFlowLayout {
         return attributes
     }
     
+    public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+        return true
+    }
+    
     public override var collectionViewContentSize: CGSize {
         get {
             let collectionSize = super.collectionViewContentSize
