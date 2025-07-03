@@ -1,7 +1,7 @@
 {
   "name": "ZZAutoWaterFlowLayout",
-  "version": "0.0.5",
-  "summary": "自适应高度瀑布流Layout，需要在UICollectionViewCell中约束Cell的宽度。",
+  "version": "0.0.6",
+  "summary": "自适应高度宽度瀑布流Layout.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/MartinChristopher/ZZAutoWaterFlowLayout",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/MartinChristopher/ZZAutoWaterFlowLayout.git",
-    "tag": "0.0.5"
+    "tag": "0.0.6"
   },
   "platforms": {
     "ios": "9.0"

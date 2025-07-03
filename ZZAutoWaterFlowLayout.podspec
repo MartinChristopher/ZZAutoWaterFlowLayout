@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZZAutoWaterFlowLayout'
-  s.version          = '0.0.5'
-  s.summary          = '自适应高度瀑布流Layout，需要在UICollectionViewCell中约束Cell的宽度。'
+  s.version          = '0.0.6'
+  s.summary          = '自适应高度宽度瀑布流Layout.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
