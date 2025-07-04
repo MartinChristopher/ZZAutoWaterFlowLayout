@@ -1,29 +1,16 @@
-# ZZAutoWaterFlowLayout
+# ZZAutoVerticalWaterLayout
 
-[![CI Status](https://img.shields.io/travis/MartinChristopher/ZZAutoWaterFlowLayout.svg?style=flat)](https://travis-ci.org/MartinChristopher/ZZAutoWaterFlowLayout)
-[![Version](https://img.shields.io/cocoapods/v/ZZAutoWaterFlowLayout.svg?style=flat)](https://cocoapods.org/pods/ZZAutoWaterFlowLayout)
-[![License](https://img.shields.io/cocoapods/l/ZZAutoWaterFlowLayout.svg?style=flat)](https://cocoapods.org/pods/ZZAutoWaterFlowLayout)
-[![Platform](https://img.shields.io/cocoapods/p/ZZAutoWaterFlowLayout.svg?style=flat)](https://cocoapods.org/pods/ZZAutoWaterFlowLayout)
+1、flowLayout 设置预估大小 estimatedItemSize = CGSize(width: 固定宽度, height: 预估高度)
 
-## Example
+2、item 内容约束撑开高度
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+3、item 添加自适应高度代码
 
-## Requirements
-
-## Installation
-
-ZZAutoWaterFlowLayout is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'ZZAutoWaterFlowLayout'
-```
-
-## Author
-
-MartinChristopher, 519483040@qq.com
-
-## License
-
-ZZAutoWaterFlowLayout is available under the MIT license. See the LICENSE file for more info.
+override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+    contentView.layoutIfNeeded()
+    let targetSize = CGSize(width: layoutAttributes.size.width, height: UIView.layoutFittingCompressedSize.height)
+    let autoSize = contentView.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel)
+    let attributes = layoutAttributes
+    attributes.size.height = autoSize.height
+    return attributes
+}
